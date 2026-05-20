@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nandha.AI | Elite Finance Portfolio</title>
+
+<!-- GOOGLE FONT -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<!-- AOS -->
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- PARTICLES -->
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<!-- TYPED JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<style>
+
+/* GLOBAL */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+background:#020617;
+color:white;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+}
+
+/* PARTICLES */
+
+#tsparticles{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#38bdf8;
+border-radius:10px;
+}
+
+/* NAVBAR */
+
+nav{
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+z-index:1000;
+background:rgba(2,6,23,0.85);
+backdrop-filter:blur(10px);
+}
+
+.logo{
+font-size:28px;
+font-family:'Orbitron',sans-serif;
+font-weight:700;
+color:#38bdf8;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:120px 8%;
+gap:60px;
+flex-wrap:wrap;
+position:relative;
+}
+
+.hero-content{
+flex:1;
+z-index:1;
+}
+
+.hero-content h1{
+font-size:75px;
+font-family:'Orbitron',sans-serif;
+margin:20px 0;
+}
+
+.hero-content h2{
+font-size:28px;
+color:#38bdf8;
+margin-bottom:20px;
+}
+
+.hero-content p{
+color:#cbd5e1;
+line-height:1.9;
+max-width:700px;
+}
+
+.hero-buttons{
+margin-top:35px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 28px;
+border-radius:12px;
+font-weight:600;
+text-decoration:none;
+transition:0.3s;
+}
+
+.primary-btn{
+background:#38bdf8;
+color:#020617;
+}
+
+.primary-btn:hover{
+transform:translateY(-5px);
+}
+
+.secondary-btn{
+border:2px solid #38bdf8;
+color:white;
+}
+
+.secondary-btn:hover{
+background:#38bdf8;
+color:#020617;
+}
+
+/* PROFILE */
+
+.hero-image{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.profile-box{
+width:380px;
+height:380px;
+border-radius:30px;
+background:rgba(15,23,42,0.7);
+border:1px solid rgba(56,189,248,0.3);
+backdrop-filter:blur(15px);
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 0 40px rgba(56,189,248,0.3);
+overflow:hidden;
+}
+
+.profile-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* TERMINAL */
+
+.terminal{
+margin-top:35px;
+background:#0f172a;
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(56,189,248,0.3);
+max-width:650px;
+}
+
+.terminal p{
+color:#38bdf8;
+margin-bottom:10px;
+font-family:'Orbitron',sans-serif;
+}
+
+/* SECTION */
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-title h2{
+font-size:50px;
+font-family:'Orbitron',sans-serif;
+color:#38bdf8;
+}
+
+.section-title p{
+margin-top:10px;
+color:#cbd5e1;
+}
+
+/* DASHBOARD */
+
+.dashboard-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.dashboard-card{
+background:rgba(15,23,42,0.7);
+padding:35px;
+border-radius:25px;
+border:1px solid rgba(56,189,248,0.15);
+backdrop-filter:blur(12px);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.dashboard-card::before{
+content:"";
+position:absolute;
+width:200px;
+height:200px;
+background:#38bdf8;
+filter:blur(120px);
+opacity:0.15;
+top:-50px;
+right:-50px;
+}
+
+.dashboard-card:hover{
+transform:translateY(-12px);
+}
+
+.dashboard-card i{
+font-size:45px;
+color:#38bdf8;
+margin-bottom:20px;
+}
+
+.dashboard-card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.dashboard-card p{
+color:#cbd5e1;
+line-height:1.8;
+}
+
+/* MARKET THOUGHTS */
+
+.market-thoughts{
+background:rgba(15,23,42,0.7);
+padding:45px;
+border-radius:25px;
+line-height:2;
+border-left:5px solid #38bdf8;
+backdrop-filter:blur(12px);
+}
+
+/* RESEARCH TIMELINE */
+
+.timeline{
+border-left:3px solid #38bdf8;
+padding-left:35px;
+}
+
+.timeline-item{
+margin-bottom:55px;
+position:relative;
+}
+
+.timeline-item::before{
+content:"";
+position:absolute;
+width:18px;
+height:18px;
+background:#38bdf8;
+border-radius:50%;
+left:-45px;
+top:5px;
+}
+
+.timeline-item h3{
+color:#38bdf8;
+margin-bottom:10px;
+font-size:24px;
+}
+
+/* PROJECTS */
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+.project-card{
+background:rgba(15,23,42,0.7);
+padding:35px;
+border-radius:25px;
+backdrop-filter:blur(12px);
+border:1px solid rgba(56,189,248,0.15);
+transition:0.4s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.project-card h3{
+color:#38bdf8;
+margin-bottom:15px;
+}
+
+/* GAME */
+
+.game-box{
+background:rgba(15,23,42,0.7);
+padding:60px;
+border-radius:25px;
+text-align:center;
+backdrop-filter:blur(12px);
+}
+
+.game-box button{
+padding:15px 28px;
+margin:20px 10px;
+border:none;
+border-radius:12px;
+background:#38bdf8;
+font-weight:700;
+cursor:pointer;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+border-radius:20px;
+transition:0.4s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact-box{
+max-width:800px;
+margin:auto;
+background:rgba(15,23,42,0.7);
+padding:50px;
+border-radius:25px;
+backdrop-filter:blur(12px);
+}
+
+.contact-box form{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.contact-box input,
+.contact-box textarea{
+padding:16px;
+background:#020617;
+border:none;
+border-radius:12px;
+color:white;
+}
+
+.contact-box button{
+padding:16px;
+background:#38bdf8;
+border:none;
+border-radius:12px;
+font-weight:700;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+padding:35px;
+text-align:center;
+background:#020617;
+color:#94a3b8;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-content h1{
+font-size:48px;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- PARTICLES -->
+
+<div id="tsparticles"></div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+
+Nandha.AI
+
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#dashboard">Dashboard</a></li>
+
+<li><a href="#research">Research</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content" data-aos="fade-right">
+
+<h1>Nandha Kumar T</h1>
+
+<h2>
+
+<span id="typing"></span>
+
+</h2>
+
+<p>
+
+MBA Student focused on Finance, AI,
+Quantitative Research, Analytics,
+and Technology-driven Financial Systems.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="files/resume.pdf" class="btn primary-btn" download>
+
+Download Resume
+
+</a>
+
+<a href="#contact" class="btn secondary-btn">
+
+Connect
+
+</a>
+
+</div>
+
+<div class="terminal">
+
+<p>> Initializing AI Finance Interface...</p>
+
+<p>> Loading Quant Research Engine...</p>
+
+<p>> Connecting Market Intelligence Systems...</p>
+
+<p>> Welcome to Nandha.AI</p>
+
+</div>
+
+</div>
+
+<div class="hero-image" data-aos="fade-left">
+
+<div class="profile-box">
+
+<img src="images/profile.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard">
+
+<div class="section-title">
+
+<h2>AI Finance Command Center</h2>
+
+<p>Live Insights + Analytics + Research</p>
+
+</div>
+
+<div class="dashboard-grid">
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>Market Intelligence</h3>
+
+<p>
+
+Tracking NIFTY, Gold, USD/INR,
+and macroeconomic trends.
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-brain"></i>
+
+<h3>AI Research Lab</h3>
+
+<p>
+
+Building AI-driven forecasting
+and predictive analytics systems.
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-database"></i>
+
+<h3>Quant Analytics</h3>
+
+<p>
+
+ARIMA, GARCH, volatility modelling,
+and financial data interpretation.
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-gamepad"></i>
+
+<h3>Interactive Finance</h3>
+
+<p>
+
+Finance games, prediction systems,
+and market psychology experiments.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WEEKLY THOUGHTS -->
+
+<section>
+
+<div class="section-title">
+
+<h2>This Week In Markets</h2>
+
+<p>My Current Market Intelligence</p>
+
+</div>
+
+<div class="market-thoughts">
+
+<p>
+
+📈 Banking and infrastructure sectors continue showing
+relative strength amid market volatility.
+
+</p>
+
+<p>
+
+🥇 Gold remains highly reactive to global interest rate
+expectations and geopolitical developments.
+
+</p>
+
+<p>
+
+🤖 AI-related technology sectors may continue attracting
+long-term institutional attention.
+
+</p>
+
+<p>
+
+🌍 RBI commentary, inflation numbers, and FII flows
+will likely dominate short-term market direction.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- RESEARCH -->
+
+<section id="research">
+
+<div class="section-title">
+
+<h2>Quant Research Timeline</h2>
+
+<p>Research Works & Analytical Studies</p>
+
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>Silver Price Forecasting</h3>
+
+<p>
+
+Built ARIMA, GARCH & EGARCH
+forecasting systems using Python.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>IPL Prediction Engine</h3>
+
+<p>
+
+Random Forest classification system
+for IPL outcome prediction.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Flight Delay Analytics</h3>
+
+<p>
+
+Operational and weather factor
+impact analysis using statistics.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Yield Curve Modelling</h3>
+
+<p>
+
+Interest rate derivatives pricing
+using Indian market datasets.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="section-title">
+
+<h2>Elite Projects</h2>
+
+<p>Finance + AI + Data Systems</p>
+
+</div>
+
+<div class="project-grid">
+
+<div class="project-card">
+
+<h3>AI Stock Recommendation Engine</h3>
+
+<p>
+
+Experimental AI investment recommendation
+system integrating technical and
+fundamental indicators.
+
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>Market Dashboard</h3>
+
+<p>
+
+Interactive market analytics platform
+with widgets, live charts, and predictions.
+
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>Quant Research Interface</h3>
+
+<p>
+
+Research visualization and forecasting
+platform for financial analytics.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GAME -->
+
+<section>
+
+<div class="section-title">
+
+<h2>Market Prediction Simulator</h2>
+
+<p>Interactive Finance Experience</p>
+
+</div>
+
+<div class="game-box">
+
+<h3>
+
+Will NIFTY Close Higher Tomorrow?
+
+</h3>
+
+<button onclick="bullish()">
+
+Bullish 📈
+
+</button>
+
+<button onclick="bearish()">
+
+Bearish 📉
+
+</button>
+
+<p id="result" style="margin-top:30px;"></p>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="section-title">
+
+<h2>Memories & Experiences</h2>
+
+<p>Journey Through MBA, Research & Finance</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<img src="images/gallery1.jpg">
+
+<img src="images/gallery2.jpg">
+
+<img src="images/gallery3.jpg">
+
+<img src="images/gallery4.jpg">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="section-title">
+
+<h2>Connect With Me</h2>
+
+<p>Collaborations, Research & Networking</p>
+
+</div>
+
+<div class="contact-box">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Nandha Kumar T | Nandha.AI
+
+</footer>
+
+<!-- AOS -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init();
+
+</script>
+
+<!-- PARTICLES -->
+
+<script>
+
+tsParticles.load("tsparticles", {
+
+particles: {
+
+number: { value: 80 },
+
+color: { value: "#38bdf8" },
+
+shape: { type: "circle" },
+
+opacity: { value: 0.3 },
+
+size: { value: 3 },
+
+move: {
+
+enable: true,
+
+speed: 1
+
+}
+
+}
+
+});
+
+</script>
+
+<!-- TYPING -->
+
+<script>
+
+var typed = new Typed("#typing", {
+
+strings:[
+
+"AI Finance Researcher",
+
+"Quant Analytics Enthusiast",
+
+"Market Intelligence Explorer",
+
+"Future FinTech Builder"
+
+],
+
+typeSpeed:60,
+
+backSpeed:40,
+
+loop:true
+
+});
+
+</script>
+
+<!-- GAME -->
+
+<script>
+
+function bullish(){
+
+document.getElementById("result").innerHTML =
+
+"🚀 Bullish Outlook Registered.";
+
+}
+
+function bearish(){
+
+document.getElementById("result").innerHTML =
+
+"⚠️ Bearish Outlook Registered.";
+
+}
+
+</script>
+
+</body>
+
+</html>

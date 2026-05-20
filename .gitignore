@@ -1,0 +1,14 @@
+# Ignore OS metadata and editor files
+.DS_Store
+Thumbs.db
+*.log
+
+# Ignore build artifacts
+node_modules/
+*.tmp
+
+# Ignore system files
+desktop.ini
+
+# Ignore VS Code workspace settings
+.vscode/
