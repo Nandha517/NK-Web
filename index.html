@@ -1,518 +1,354 @@
-<!-- =========================================================
-NANDHA.AI — ELITE FUTURISTIC FINANCE PORTFOLIO
-FULLY INTEGRATED SINGLE FILE VERSION
-========================================================= -->
-
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nandha.AI | Elite Finance Portfolio</title>
-
-<!-- GOOGLE FONTS -->
+<title>NANDHA.AI | Financial Intelligence Platform</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
-<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
-<!-- PARTICLES -->
-
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-
-<!-- TYPED JS -->
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.12.0/tsparticles.bundle.min.js"></script>
 
 <style>
 
-/* =========================================================
-GLOBAL
-========================================================= */
+:root{
+  --bg:#040812;
+  --surface:rgba(10,20,45,.7);
+  --border:rgba(56,139,253,.15);
+  --accent:#388bfd;
+  --accent2:#58a6ff;
+  --text:#e6edf3;
+  --text2:#9aa4af;
+  --heading:'Orbitron',sans-serif;
+  --body:'DM Sans',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:#020617;
-color:white;
-overflow-x:hidden;
-transition:0.5s;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  overflow-x:hidden;
 }
-
-/* SCROLLBAR */
-
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-thumb{
-background:#38bdf8;
-border-radius:10px;
-}
-
-/* PARTICLES */
 
 #tsparticles{
-position:fixed;
-width:100%;
-height:100%;
-z-index:-1;
+  position:fixed;
+  inset:0;
+  z-index:0;
 }
 
-/* =========================================================
-NAVBAR
-========================================================= */
+main{
+  position:relative;
+  z-index:2;
+}
+
+section{
+  padding:90px 8%;
+}
+
+.glass{
+  background:var(--surface);
+  border:1px solid var(--border);
+  backdrop-filter:blur(16px);
+}
 
 nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 7%;
-position:fixed;
-top:0;
-width:100%;
-background:rgba(2,6,23,0.85);
-backdrop-filter:blur(12px);
-z-index:1000;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 8%;
+  background:rgba(4,8,18,.85);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  z-index:999;
 }
 
 .logo{
-font-family:'Orbitron',sans-serif;
-font-size:30px;
-font-weight:700;
-color:#38bdf8;
+  font-family:var(--heading);
+  color:var(--accent2);
+  font-size:1.1rem;
+  font-weight:700;
+  text-decoration:none;
 }
 
-nav ul{
-display:flex;
-gap:24px;
-list-style:none;
+.nav-links{
+  display:flex;
+  gap:25px;
 }
 
-nav ul li a{
-text-decoration:none;
-color:white;
-font-size:15px;
-transition:0.3s;
+.nav-links a{
+  color:var(--text2);
+  text-decoration:none;
+  font-family:var(--mono);
+  font-size:.72rem;
+  transition:.3s;
 }
 
-nav ul li a:hover{
-color:#38bdf8;
+.nav-links a:hover{
+  color:var(--accent2);
 }
-
-/* =========================================================
-SECTIONS
-========================================================= */
-
-section{
-padding:90px 7%;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:45px;
-}
-
-.section-title h2{
-font-size:42px;
-font-family:'Orbitron',sans-serif;
-color:#38bdf8;
-margin-bottom:12px;
-}
-
-.section-title p{
-color:#cbd5e1;
-}
-
-/* =========================================================
-HERO
-========================================================= */
 
 .hero{
-min-height:100vh;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:40px;
-flex-wrap:wrap;
-padding-top:120px;
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1fr 380px;
+  gap:50px;
+  align-items:center;
 }
 
-.hero-left{
-flex:1;
-min-width:320px;
+.hero-title{
+  font-family:var(--heading);
+  font-size:4rem;
+  line-height:1.1;
+  margin-bottom:20px;
 }
 
-.hero-left h1{
-font-size:68px;
-font-family:'Orbitron',sans-serif;
-margin-bottom:18px;
+.hero-title span{
+  color:var(--accent2);
 }
 
-.hero-left h2{
-font-size:28px;
-color:#38bdf8;
-margin-bottom:18px;
+.hero-desc{
+  color:var(--text2);
+  line-height:1.8;
+  max-width:700px;
+  margin-bottom:30px;
 }
 
-.hero-left p{
-line-height:1.8;
-color:#cbd5e1;
-max-width:700px;
+.btns{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
 }
 
-/* BUTTONS */
-
-.hero-buttons{
-display:flex;
-gap:15px;
-margin-top:28px;
-flex-wrap:wrap;
+.btn{
+  padding:14px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-family:var(--heading);
+  font-size:.7rem;
+  letter-spacing:.08em;
+  transition:.3s;
 }
 
-.primary-btn,
-.secondary-btn{
-padding:14px 24px;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
+.btn-primary{
+  background:var(--accent);
+  color:white;
 }
 
-.primary-btn{
-background:#38bdf8;
-color:#020617;
+.btn-primary:hover{
+  transform:translateY(-3px);
 }
 
-.primary-btn:hover{
-transform:translateY(-4px);
+.btn-outline{
+  border:1px solid var(--border);
+  color:var(--accent2);
 }
-
-.secondary-btn{
-border:1px solid #38bdf8;
-color:white;
-}
-
-.secondary-btn:hover{
-background:#38bdf8;
-color:#020617;
-}
-
-/* =========================================================
-TERMINAL
-========================================================= */
-
-.terminal{
-margin-top:30px;
-background:rgba(15,23,42,0.8);
-padding:22px;
-border-radius:18px;
-border:1px solid rgba(56,189,248,0.2);
-}
-
-.terminal p{
-margin-bottom:10px;
-color:#38bdf8;
-font-family:'Orbitron',sans-serif;
-font-size:13px;
-}
-
-/* =========================================================
-RIGHT SIDE
-========================================================= */
 
 .hero-right{
-display:flex;
-flex-direction:column;
-gap:22px;
-align-items:center;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
 }
 
-/* PROFILE */
-
-.profile-card{
-width:320px;
-height:320px;
-border-radius:25px;
-overflow:hidden;
-border:1px solid rgba(255,255,255,0.1);
-box-shadow:0 0 35px rgba(56,189,248,0.25);
+.card{
+  padding:25px;
+  border-radius:18px;
 }
 
-.profile-card img{
-width:100%;
-height:100%;
-object-fit:cover;
+.profile-avatar{
+  width:110px;
+  height:110px;
+  margin:auto;
+  border-radius:50%;
+  overflow:hidden;
+  border:2px solid var(--accent);
+  margin-bottom:18px;
 }
 
-/* =========================================================
-CLOCK
-========================================================= */
-
-.clock-container{
-background:rgba(15,23,42,0.85);
-padding:22px;
-border-radius:22px;
-width:320px;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:18px;
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
+.profile-avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-.analog-clock{
-width:170px;
-height:170px;
-border:4px solid #38bdf8;
-border-radius:50%;
-position:relative;
-background:#020617;
+.profile-name{
+  text-align:center;
+  font-family:var(--heading);
+  margin-bottom:8px;
+}
+
+.profile-role{
+  text-align:center;
+  color:var(--accent2);
+  font-size:.8rem;
+  font-family:var(--mono);
+}
+
+.clock-box{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.clock{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  border:2px solid var(--accent);
+  position:relative;
 }
 
 .hand{
-position:absolute;
-bottom:50%;
-left:50%;
-transform-origin:bottom;
-transform:translateX(-50%);
-border-radius:10px;
+  position:absolute;
+  bottom:50%;
+  left:50%;
+  transform-origin:bottom;
+  background:white;
 }
 
 .hour{
-width:6px;
-height:45px;
-background:white;
+  width:3px;
+  height:20px;
 }
 
-.minute{
-width:4px;
-height:60px;
-background:#38bdf8;
+.min{
+  width:2px;
+  height:28px;
 }
 
-.second{
-width:2px;
-height:70px;
-background:red;
+.sec{
+  width:1px;
+  height:34px;
+  background:red;
 }
 
-.center-dot{
-width:12px;
-height:12px;
-background:white;
-border-radius:50%;
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
+.center{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--accent2);
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
 }
 
-.digital-clock{
-text-align:center;
+.digital{
+  font-family:var(--heading);
+  color:var(--accent2);
 }
 
-#ist-time{
-font-size:24px;
-font-family:'Orbitron',sans-serif;
-color:#38bdf8;
+.section-title{
+  font-family:var(--heading);
+  font-size:2.4rem;
+  margin-bottom:15px;
 }
 
-.timezone{
-margin-top:8px;
-font-size:13px;
-color:#cbd5e1;
+.section-sub{
+  color:var(--text2);
+  max-width:700px;
 }
 
-/* =========================================================
-CARDS
-========================================================= */
-
-.dashboard-grid,
-.research-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:22px;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+  margin-top:50px;
 }
 
-.dashboard-card,
-.research-card,
-.wordpress-box,
-.certificate-box,
-.contact-box,
-.thought-box{
-background:rgba(15,23,42,0.75);
-padding:28px;
-border-radius:22px;
-border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
-transition:0.3s;
+.box{
+  padding:30px;
+  border-radius:18px;
+  transition:.3s;
 }
 
-.dashboard-card:hover,
-.research-card:hover{
-transform:translateY(-6px);
+.box:hover{
+  transform:translateY(-6px);
 }
 
-.dashboard-card i{
-font-size:40px;
-color:#38bdf8;
-margin-bottom:18px;
+.box i{
+  font-size:1.5rem;
+  color:var(--accent2);
+  margin-bottom:18px;
 }
 
-.dashboard-card h3,
-.research-card h3{
-margin-bottom:15px;
+.box h3{
+  font-family:var(--heading);
+  font-size:1rem;
+  margin-bottom:12px;
 }
 
-.dashboard-card p,
-.research-card p,
-.wordpress-box p,
-.certificate-box p{
-line-height:1.8;
-color:#cbd5e1;
+.box p{
+  color:var(--text2);
+  line-height:1.7;
 }
-
-/* BUTTONS */
-
-.research-buttons{
-margin-top:20px;
-}
-
-.research-buttons a,
-.wordpress-box a,
-.certificate-box a{
-display:inline-block;
-margin-top:18px;
-padding:12px 18px;
-background:#38bdf8;
-color:#020617;
-border-radius:10px;
-text-decoration:none;
-font-weight:600;
-}
-
-/* =========================================================
-MARKET THOUGHTS
-========================================================= */
-
-.thought-box p{
-margin-bottom:16px;
-}
-
-/* =========================================================
-GALLERY
-========================================================= */
 
 .gallery-grid{
-column-count:4;
-column-gap:16px;
+  columns:3;
+  column-gap:18px;
+  margin-top:50px;
 }
 
-.gallery-grid img{
-width:100%;
-margin-bottom:16px;
-border-radius:18px;
-transition:0.4s;
-cursor:pointer;
-border:1px solid rgba(255,255,255,0.08);
+.gallery-item{
+  break-inside:avoid;
+  margin-bottom:18px;
+  overflow:hidden;
+  border-radius:16px;
+  border:1px solid var(--border);
 }
 
-.gallery-grid img:hover{
-transform:scale(1.03);
-box-shadow:0 0 25px rgba(56,189,248,0.35);
+.gallery-item img{
+  width:100%;
+  display:block;
+  transition:.5s;
 }
 
-/* =========================================================
-CONTACT
-========================================================= */
-
-.contact-box{
-max-width:700px;
-margin:auto;
+.gallery-item:hover img{
+  transform:scale(1.05);
 }
-
-.contact-box form{
-display:flex;
-flex-direction:column;
-gap:18px;
-}
-
-.contact-box input,
-.contact-box textarea{
-padding:15px;
-border:none;
-border-radius:10px;
-background:#020617;
-color:white;
-}
-
-.contact-box button{
-padding:14px;
-border:none;
-border-radius:10px;
-background:#38bdf8;
-font-weight:700;
-cursor:pointer;
-}
-
-/* =========================================================
-FOOTER
-========================================================= */
 
 footer{
-padding:30px;
-text-align:center;
-color:#94a3b8;
+  padding:40px 8%;
+  border-top:1px solid var(--border);
+  text-align:center;
+  color:var(--text2);
+  font-family:var(--mono);
+  font-size:.7rem;
 }
-
-/* =========================================================
-RESPONSIVE
-========================================================= */
 
 @media(max-width:900px){
 
-nav{
-flex-direction:column;
-gap:15px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
-
 .hero{
-flex-direction:column;
-text-align:center;
-}
-
-.hero-buttons{
-justify-content:center;
-}
-
-.hero-left h1{
-font-size:42px;
+  grid-template-columns:1fr;
 }
 
 .gallery-grid{
-column-count:2;
+  columns:2;
+}
+
+.hero-title{
+  font-size:2.7rem;
 }
 
 }
@@ -520,86 +356,65 @@ column-count:2;
 @media(max-width:600px){
 
 .gallery-grid{
-column-count:1;
+  columns:1;
+}
+
+.nav-links{
+  display:none;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- PARTICLES -->
-
 <div id="tsparticles"></div>
-
-<!-- NAVBAR -->
 
 <nav>
 
-<div class="logo">
+<a href="#" class="logo">
+NANDHA.AI
+</a>
 
-Nandha.AI
-
+<div class="nav-links">
+<a href="#home">HOME</a>
+<a href="#domains">DOMAINS</a>
+<a href="#research">RESEARCH</a>
+<a href="#gallery">GALLERY</a>
+<a href="#contact">CONTACT</a>
 </div>
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-<li><a href="#dashboard">Dashboard</a></li>
-<li><a href="#research">Research</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-
-</ul>
 
 </nav>
 
-<!-- HERO -->
+<main>
 
 <section class="hero" id="home">
 
-<div class="hero-left">
+<div>
 
-<h1>Nandha Kumar T</h1>
+<h1 class="hero-title">
+Designing the Future of <span>Financial Intelligence</span>
+</h1>
 
-<h2>
-
-<span id="typing"></span>
-
-</h2>
-
-<p>
-
-MBA Finance | AI Research | Market Intelligence |
-Analytics | Quantitative Research
-
+<p class="hero-desc">
+MBA Finance student, AI researcher, quantitative analytics enthusiast, and financial systems explorer building intelligent research-driven financial ecosystems.
 </p>
 
-<div class="hero-buttons">
+<div class="btns">
 
-<a href="files/resume.pdf" target="_blank" class="primary-btn">
-
+<a href="assets/docs/nandha-resume.pdf"
+target="_blank"
+class="btn btn-primary">
+<i class="fas fa-file"></i>
 Resume
-
 </a>
 
-<a href="#contact" class="secondary-btn">
-
-Connect
-
+<a href="#gallery"
+class="btn btn-outline">
+Explore Memories
 </a>
-
-</div>
-
-<div class="terminal">
-
-<p>> Initializing AI Finance Systems...</p>
-<p>> Connecting Market Intelligence...</p>
-<p>> Loading Quantitative Models...</p>
-<p>> Welcome to Nandha.AI</p>
 
 </div>
 
@@ -607,35 +422,44 @@ Connect
 
 <div class="hero-right">
 
-<div class="profile-card">
+<div class="card glass">
 
-<img src="images/profile.jpg">
+<div class="profile-avatar">
+<img src="assets/images/profile/nandha-profile.jpg">
+</div>
+
+<div class="profile-name">
+Nandha Kumar T
+</div>
+
+<div class="profile-role">
+MBA Finance • AI Researcher
+</div>
 
 </div>
 
-<!-- CLOCK -->
+<div class="card glass">
 
-<div class="clock-container">
+<div class="clock-box">
 
-<div class="analog-clock">
+<div class="clock">
 
 <div class="hand hour" id="hour"></div>
-
-<div class="hand minute" id="minute"></div>
-
-<div class="hand second" id="second"></div>
-
-<div class="center-dot"></div>
+<div class="hand min" id="min"></div>
+<div class="hand sec" id="sec"></div>
+<div class="center"></div>
 
 </div>
 
-<div class="digital-clock">
+<div>
 
-<div id="ist-time"></div>
+<div class="digital" id="digitalTime">
+00:00:00
+</div>
 
-<div class="timezone">
-
-IST • India Standard Time
+<div style="color:var(--text2);font-size:.8rem;">
+Asia/Kolkata
+</div>
 
 </div>
 
@@ -647,424 +471,232 @@ IST • India Standard Time
 
 </section>
 
-<!-- DASHBOARD -->
+<section id="domains">
 
-<section id="dashboard">
+<h2 class="section-title">
+Intelligence Domains
+</h2>
 
-<div class="section-title">
+<p class="section-sub">
+Research-driven exploration across finance, AI, analytics, and market systems.
+</p>
 
-<h2>AI Finance Command Center</h2>
+<div class="grid">
 
-<p>Research • Markets • Analytics • Intelligence</p>
-
-</div>
-
-<div class="dashboard-grid">
-
-<div class="dashboard-card">
-
-<i class="fa-solid fa-chart-line"></i>
-
+<div class="box glass">
+<i class="fas fa-chart-line"></i>
 <h3>Market Intelligence</h3>
-
 <p>
-
-Tracking market behaviour, sector movement,
-and financial trends.
-
+Analyzing market trends, macroeconomics, derivatives, commodities, and institutional activity.
 </p>
-
 </div>
 
-<div class="dashboard-card">
-
-<i class="fa-solid fa-brain"></i>
-
-<h3>AI Research Lab</h3>
-
+<div class="box glass">
+<i class="fas fa-brain"></i>
+<h3>AI Research</h3>
 <p>
-
-Building AI-driven analytical and
-forecasting systems.
-
+Applying machine learning and AI systems to finance, education, and intelligent analytics.
 </p>
-
 </div>
 
-<div class="dashboard-card">
-
-<i class="fa-solid fa-database"></i>
-
+<div class="box glass">
+<i class="fas fa-calculator"></i>
 <h3>Quant Analytics</h3>
-
 <p>
-
-Volatility modelling, predictive analytics,
-and finance research.
-
+Yield curves, volatility models, pricing systems, futures analytics, and risk modelling.
 </p>
-
 </div>
 
-<div class="dashboard-card">
-
-<i class="fa-solid fa-gamepad"></i>
-
-<h3>Interactive Finance</h3>
-
+<div class="box glass">
+<i class="fas fa-globe"></i>
+<h3>Financial Ecosystems</h3>
 <p>
-
-Finance games, simulations,
-and market intelligence systems.
-
+Understanding monetary systems, economic frameworks, and financial transformation.
 </p>
-
 </div>
 
 </div>
 
 </section>
-
-<!-- MARKET THOUGHTS -->
-
-<section>
-
-<div class="section-title">
-
-<h2>This Week In Markets</h2>
-
-<p>My Weekly Market Intelligence</p>
-
-</div>
-
-<div class="thought-box">
-
-<p>📈 Banking and infrastructure remain relatively stronger sectors.</p>
-
-<p>🥇 Gold volatility continues amid global uncertainty.</p>
-
-<p>🤖 AI-driven sectors continue attracting institutional interest.</p>
-
-<p>🌍 RBI policy and FII flows may influence short-term movement.</p>
-
-</div>
-
-</section>
-
-<!-- RESEARCH -->
 
 <section id="research">
 
-<div class="section-title">
+<h2 class="section-title">
+Research Repository
+</h2>
 
-<h2>Research Repository</h2>
-
-<p>Research Papers & Analytics Studies</p>
-
-</div>
-
-<div class="research-grid">
-
-<div class="research-card">
-
-<h3>Yield Curve Modelling</h3>
-
-<p>
-
-Interest rate derivatives and yield curve analysis.
-
+<p class="section-sub">
+Research papers, publications, reports, and analytical frameworks.
 </p>
 
-<div class="research-buttons">
+<div class="grid">
 
-<a href="files/Research Papers/yield-curve-modelling.pdf" target="_blank">
-
-View Paper
-
-</a>
-
-</div>
-
-</div>
-
-<div class="research-card">
-
-<h3>Gold & Silver Futures Analytics</h3>
-
-<p>
-
-Commodity forecasting and volatility analytics.
-
-</p>
-
-<div class="research-buttons">
-
-<a href="files/Research Papers/Gold_Silver_Futures_Analytics_Report.pdf" target="_blank">
-
-View Paper
-
-</a>
-
-</div>
-
-</div>
-
-<div class="research-card">
-
-<h3>WTC 2025 Analysis</h3>
-
-<p>
-
-Sports analytics and performance evaluation research.
-
-</p>
-
-<div class="research-buttons">
-
-<a href="files/Research Papers/WTC 2025 Analysis.pdf" target="_blank">
-
-View Paper
-
-</a>
-
-</div>
-
-</div>
-
-<div class="research-card">
-
-<h3>AI in Higher Education</h3>
-
-<p>
-
-AI integration in management education systems.
-
-</p>
-
-<div class="research-buttons">
-
-<a href="files/Research Papers/AI in Higher Education.pdf" target="_blank">
-
-View Paper
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CERTIFICATIONS -->
-
-<section>
-
-<div class="section-title">
-
-<h2>Certifications</h2>
-
-<p>Finance • Analytics • AI • Data Science</p>
-
-</div>
-
-<div class="certificate-box">
-
-<p>
-
-12+ certifications completed in:
-Finance, Machine Learning, Analytics,
-Data Science, Investments, Python & Research.
-
-</p>
-
-<a href="files/Certifications/" target="_blank">
-
-Explore Certifications
-
-</a>
-
-</div>
-
-</section>
-
-<!-- WORDPRESS -->
-
-<section>
-
-<div class="section-title">
-
-<h2>Market Intelligence Journal</h2>
-
-<p>Articles & Market Insights</p>
-
-</div>
-
-<div class="wordpress-box">
+<div class="box glass">
 
 <h3>
-
-NS Education Centre Blog
-
+Yield Curve Modelling
 </h3>
 
 <p>
-
-Finance, AI, MBA, Analytics,
-and Market Intelligence articles.
-
+Empirical modelling of interest rates and Indian government securities.
 </p>
 
-<a href="https://nseducationcentrecom.wordpress.com" target="_blank">
+<br>
 
-Visit WordPress Blog
-
+<a href="assets/docs/Research Papers/research-yield-curve-modelling.pdf"
+target="_blank"
+class="btn btn-outline">
+Open Research
 </a>
 
 </div>
 
-</section>
+<div class="box glass">
 
-<!-- GALLERY -->
+<h3>
+Gold & Silver Futures Analytics
+</h3>
+
+<p>
+Quantitative commodity market analytics and futures price dynamics.
+</p>
+
+<br>
+
+<a href="assets/docs/Research Papers/research Gold_Silver_Futures_Analytics_R.pdf"
+target="_blank"
+class="btn btn-outline">
+Open Research
+</a>
+
+</div>
+
+<div class="box glass">
+
+<h3>
+AI in Higher Education
+</h3>
+
+<p>
+Exploring AI transformation in MBA and management education systems.
+</p>
+
+<br>
+
+<a href="assets/docs/Research Papers/research-AI in Higher Education.pdf"
+target="_blank"
+class="btn btn-outline">
+Open Research
+</a>
+
+</div>
+
+</div>
+
+</section>
 
 <section id="gallery">
 
-<div class="section-title">
+<h2 class="section-title">
+NK's TSM Memories
+</h2>
 
-<h2>NK's TSM Memories</h2>
+<p class="section-sub">
+Campus life, friendships, leadership, research, and unforgettable moments.
+</p>
 
-<p>Campus • Leadership • Research • Events</p>
-
-</div>
-
-<div class="gallery-grid" id="gallery-grid">
-
-</div>
+<div class="gallery-grid" id="galleryGrid"></div>
 
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact">
 
-<div class="section-title">
+<h2 class="section-title">
+Let's Connect
+</h2>
 
-<h2>Connect With Me</h2>
+<p class="section-sub">
+Open for collaborations, finance discussions, AI research, and opportunities.
+</p>
 
-<p>Research • Collaboration • Networking</p>
+<br><br>
 
-</div>
+<div class="card glass">
 
-<div class="contact-box">
+<div style="display:grid;gap:15px;">
 
-<form>
+<input type="text"
+placeholder="Your Name"
+style="padding:14px;border:none;border-radius:10px;background:#09111d;color:white;">
 
-<input type="text" placeholder="Your Name">
+<input type="email"
+placeholder="Your Email"
+style="padding:14px;border:none;border-radius:10px;background:#09111d;color:white;">
 
-<input type="email" placeholder="Your Email">
+<textarea
+placeholder="Your Message"
+rows="6"
+style="padding:14px;border:none;border-radius:10px;background:#09111d;color:white;"></textarea>
 
-<textarea rows="5" placeholder="Your Message"></textarea>
-
-<button type="submit">
-
+<button class="btn btn-primary"
+style="border:none;cursor:pointer;">
 Send Message
-
 </button>
 
-</form>
+</div>
 
 </div>
 
 </section>
 
+</main>
+
 <footer>
-
-© 2026 Nandha Kumar T | Nandha.AI
-
+© 2026 NANDHA.AI | AI Financial Intelligence Platform
 </footer>
 
 <script>
 
-/* =========================================================
-PARTICLES
-========================================================= */
+/* PARTICLES */
 
-tsParticles.load("tsparticles", {
-
-particles: {
-
-number: { value: 80 },
-
-color: { value: "#38bdf8" },
-
-shape: { type: "circle" },
-
-opacity: { value: 0.3 },
-
-size: { value: 3 },
-
-move: {
-enable: true,
-speed: 1
-}
-
-}
-
+tsParticles.load("tsparticles",{
+  particles:{
+    number:{value:60},
+    color:{value:"#388bfd"},
+    opacity:{value:.2},
+    size:{value:2},
+    move:{enable:true,speed:.5},
+    links:{
+      enable:true,
+      distance:140,
+      opacity:.1,
+      color:"#388bfd"
+    }
+  }
 });
 
-/* =========================================================
-TYPING
-========================================================= */
-
-new Typed("#typing", {
-
-strings:[
-
-"AI Finance Researcher",
-"Market Intelligence Explorer",
-"Quant Analytics Enthusiast",
-"Future FinTech Builder"
-
-],
-
-typeSpeed:60,
-backSpeed:40,
-loop:true
-
-});
-
-/* =========================================================
-CLOCK
-========================================================= */
+/* CLOCK */
 
 function updateClock(){
 
-const now = new Date();
+const now=new Date();
 
-const indiaTime = new Date(
-now.toLocaleString("en-US", {
-timeZone: "Asia/Kolkata"
-})
-);
+const h=now.getHours();
+const m=now.getMinutes();
+const s=now.getSeconds();
 
-const hours = indiaTime.getHours();
-const minutes = indiaTime.getMinutes();
-const seconds = indiaTime.getSeconds();
+const hourDeg=(h%12)*30+m*.5;
+const minDeg=m*6;
+const secDeg=s*6;
 
-const hourDeg = (hours % 12) * 30 + minutes * 0.5;
-const minuteDeg = minutes * 6;
-const secondDeg = seconds * 6;
+document.getElementById("hour").style.transform=`rotate(${hourDeg}deg)`;
+document.getElementById("min").style.transform=`rotate(${minDeg}deg)`;
+document.getElementById("sec").style.transform=`rotate(${secDeg}deg)`;
 
-document.getElementById("hour").style.transform =
-`translateX(-50%) rotate(${hourDeg}deg)`;
-
-document.getElementById("minute").style.transform =
-`translateX(-50%) rotate(${minuteDeg}deg)`;
-
-document.getElementById("second").style.transform =
-`translateX(-50%) rotate(${secondDeg}deg)`;
-
-document.getElementById("ist-time").innerHTML =
-indiaTime.toLocaleTimeString();
+document.getElementById("digitalTime").innerHTML=
+`${String(h).padStart(2,"0")}:
+${String(m).padStart(2,"0")}:
+${String(s).padStart(2,"0")}`;
 
 }
 
@@ -1072,112 +704,46 @@ setInterval(updateClock,1000);
 
 updateClock();
 
-/* =========================================================
-THEME ENGINE
-========================================================= */
+/* GALLERY */
 
-const hour = new Date().toLocaleString("en-US", {
-timeZone: "Asia/Kolkata",
-hour: "numeric",
-hour12: false
-});
+const galleryImages=[
 
-if(hour >= 6 && hour < 12){
-
-document.body.style.background =
-"linear-gradient(to bottom,#0f172a,#1e3a8a)";
-
-}
-
-else if(hour >= 12 && hour < 18){
-
-document.body.style.background =
-"linear-gradient(to bottom,#020617,#0f172a)";
-
-}
-
-else{
-
-document.body.style.background =
-"linear-gradient(to bottom,#020617,#000000)";
-
-}
-
-/* =========================================================
-SMART GALLERY SYSTEM
-========================================================= */
-
-const gallery = document.getElementById("gallery-grid");
-
-/*
-ONLY IMAGE NAMES
-WITHOUT EXTENSIONS
-*/
-
-const imageNames = [
-
-"IMG_1326",
-"IMG_1360",
-"IMG_9308",
-"IMG-20250805_193216401",
-"IMG-20251206-WA0030",
-"IMG-20251206-WA0038",
-"IMG-20251206-WA0041",
-"IMG-20251206-WA0045",
-"WhatsApp Image 2025-12-31 at 4.51.47 PM",
-"WhatsApp Image 2026-03-31 at 12.08.34 PM"
+"assets/images/gallery/IMG_0011.jpg",
+"assets/images/gallery/IMG_1326.JPG",
+"assets/images/gallery/IMG_1360.JPG",
+"assets/images/gallery/IMG_5240.jpg",
+"assets/images/gallery/IMG_5459.jpg",
+"assets/images/gallery/IMG_6176.jpg",
+"assets/images/gallery/IMG_9308.JPG",
+"assets/images/gallery/IMG-2025.jpg",
+"assets/images/gallery/IMG-20250303-WA0037.jpg",
+"assets/images/gallery/IMG-20250413-WA0012.jpg",
+"assets/images/gallery/IMG-20250422-WA0030.jpg",
+"assets/images/gallery/IMG-20250921-WA0004.jpg",
+"assets/images/gallery/IMG-20251206-WA0030.jpg",
+"assets/images/gallery/IMG-20251206-WA0036.jpg",
+"assets/images/gallery/IMG-20251206-WA0041.jpg",
+"assets/images/gallery/IMG-20251206-WA0045.jpg"
 
 ];
 
-/*
-SUPPORTED FORMATS
-*/
+const gallery=document.getElementById("galleryGrid");
 
-const extensions = [
+galleryImages.forEach((img)=>{
 
-".jpg",
-".jpeg",
-".JPG",
-".JPEG"
+const div=document.createElement("div");
 
-];
+div.className="gallery-item";
 
-imageNames.forEach((name)=>{
+div.innerHTML=`
+<img src="${img}" loading="lazy">
+`;
 
-let img = document.createElement("img");
-
-let found = false;
-
-extensions.forEach((ext)=>{
-
-if(found) return;
-
-const path = `images/nk-tsm-memories/${name}${ext}`;
-
-const testImg = new Image();
-
-testImg.onload = function(){
-
-if(!found){
-
-img.src = path;
-
-gallery.appendChild(img);
-
-found = true;
-
-}
-
-};
-
-testImg.src = path;
-
-});
+gallery.appendChild(div);
 
 });
 
 </script>
 
 </body>
-
 </html>
