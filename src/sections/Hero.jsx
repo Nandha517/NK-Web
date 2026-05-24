@@ -35,7 +35,7 @@ function Hero(){
         <div className="hero-buttons">
 
           <a
-            href="/assets/docs/Nandha Resume.pdf"
+            href="/NK-Web/assets/docs/Nandha Resume.pdf"
             className="btn btn-primary"
             target="_blank"
           >
@@ -56,7 +56,7 @@ function Hero(){
       <div className="hero-image">
 
         <img
-          src="/assets/images/nandha-profile.jpg"
+          src="/NK-Web/assets/images/nandha-profile.jpg"
           alt="Nandha Kumar"
         />
 

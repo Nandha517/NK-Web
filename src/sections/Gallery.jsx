@@ -1,16 +1,16 @@
 const galleryImages = [
 
-  "/assets/images/gallery/gallery1.jpg",
-  "/assets/images/gallery/gallery2.jpg",
-  "/assets/images/gallery/gallery3.jpg",
-  "/assets/images/gallery/gallery4.jpg",
-  "/assets/images/gallery/gallery5.jpg",
-  "/assets/images/gallery/gallery6.jpg",
-  "/assets/images/gallery/gallery7.jpg",
-  "/assets/images/gallery/gallery8.jpg",
-  "/assets/images/gallery/gallery9.jpg",
-  "/assets/images/gallery/gallery10.jpg",
-  "/assets/images/gallery/gallery11.jpg",
+  "/NK-Web/assets/images/gallery/gallery1.jpg",
+  "/NK-Web/assets/images/gallery/gallery2.jpg",
+  "/NK-Web/assets/images/gallery/gallery3.jpg",
+  "/NK-Web/assets/images/gallery/gallery4.jpg",
+  "/NK-Web/assets/images/gallery/gallery5.jpg",
+  "/NK-Web/assets/images/gallery/gallery6.jpg",
+  "/NK-Web/assets/images/gallery/gallery7.jpg",
+  "/NK-Web/assets/images/gallery/gallery8.jpg",
+  "/NK-Web/assets/images/gallery/gallery9.jpg",
+  "/NK-Web/assets/images/gallery/gallery10.jpg",
+  "/NK-Web/assets/images/gallery/gallery11.jpg",
 
 ];
 

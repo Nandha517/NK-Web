@@ -5,7 +5,7 @@ const projects = [
     title:"Commodity Investment Analytics",
 
     image:
-    "/assets/images/dashboards/Commodity Investment Analytics.jpg",
+    "/NK-Web/assets/images/dashboards/Commodity Investment Analytics.jpg",
 
     description:
     "Forecasting system for Gold & Silver Futures using quantitative finance, analytics, and AI-based predictive models.",
@@ -14,7 +14,7 @@ const projects = [
     "Python • ARIMA • GARCH • LSTM • Power BI",
 
     paper:
-    "/assets/docs/Projects/Silver analytics.pdf",
+    "/NK-Web/assets/docs/Projects/Silver analytics.pdf",
 
   },
 
@@ -23,7 +23,7 @@ const projects = [
     title:"WTC 2025 Analytics",
 
     image:
-    "/assets/images/dashboards/WTC 2025 Analytics.jpg",
+    "/NK-Web/assets/images/dashboards/WTC 2025 Analytics.jpg",
 
     description:
     "Cricket analytics project using performance modelling, clustering, predictive analytics, and statistical analysis.",
@@ -32,7 +32,7 @@ const projects = [
     "Python • ML • Sports Analytics • Visualization",
 
     paper:
-    "/assets/docs/Projects/WTC 2025 Analysis.pdf",
+    "/NK-Web/assets/docs/Projects/WTC 2025 Analysis.pdf",
 
   },
 
@@ -41,7 +41,7 @@ const projects = [
     title:"Flight Delay Analysis",
 
     image:
-    "/assets/images/dashboards/Flight Delay Analysis.jpg",
+    "/NK-Web/assets/images/dashboards/Flight Delay Analysis.jpg",
 
     description:
     "Operational and statistical analysis of Indian metro flight delays using data analytics and visualization.",
@@ -50,7 +50,7 @@ const projects = [
     "Python • Excel • Tableau • Analytics",
 
     paper:
-    "/assets/docs/Projects/Analysis of Flight Delays.pdf",
+    "/NK-Web/assets/docs/Projects/Analysis of Flight Delays.pdf",
 
   },
 
@@ -59,7 +59,7 @@ const projects = [
     title:"Forecasting ITC Stock Prices",
 
     image:
-    "/assets/images/dashboards/Forecasting ITC Stock Prices.jpg",
+    "/NK-Web/assets/images/dashboards/Forecasting ITC Stock Prices.jpg",
 
     description:
     "Predictive stock price forecasting project comparing financial time-series models and AI techniques.",
@@ -68,7 +68,7 @@ const projects = [
     "ARIMA • ANN • Financial Forecasting • AI",
 
     paper:
-    "/assets/docs/Projects/Forecasting ITC Stock Prices.pdf",
+    "/NK-Web/assets/docs/Projects/Forecasting ITC Stock Prices.pdf",
 
   },
 

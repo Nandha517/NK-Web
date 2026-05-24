@@ -4,28 +4,28 @@ const certificates = [
     title:"Financial Markets",
     issuer:"Yale University - Coursera",
     desc:"Understanding of global financial markets, behavioral finance, bonds, stocks, and risk management.",
-    file:"/assets/docs/Certifications/Coursera/financial-markets.pdf"
+    file:"/NK-Web/assets/docs/Certifications/Coursera/financial-markets.pdf"
   },
 
   {
     title:"Google Data Analytics",
     issuer:"Google - Coursera",
     desc:"Data cleaning, visualization, spreadsheets, SQL, Tableau, and analytics foundations.",
-    file:"/assets/docs/Certifications/Coursera/google-data-analytics.pdf"
+    file:"/NK-Web/assets/docs/Certifications/Coursera/google-data-analytics.pdf"
   },
 
   {
     title:"AI For Everyone",
     issuer:"DeepLearning.AI",
     desc:"AI transformation, machine learning workflows, and AI business integration.",
-    file:"/assets/docs/Certifications/Coursera/ai-for-everyone.pdf"
+    file:"/NK-Web/assets/docs/Certifications/Coursera/ai-for-everyone.pdf"
   },
 
   {
     title:"Investment Banking Basics",
     issuer:"Coursera",
     desc:"Investment valuation, financial statement analysis, and corporate finance basics.",
-    file:"/assets/docs/Certifications/Coursera/investment-banking.pdf"
+    file:"/NK-Web/assets/docs/Certifications/Coursera/investment-banking.pdf"
   },
 
 ];

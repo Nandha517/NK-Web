@@ -68,7 +68,7 @@ function Resume(){
 
           <a
 
-            href="/assets/docs/Nandha Kumar TSM Resume.pdf"
+            href="/NK-Web/assets/docs/Nandha Kumar TSM Resume.pdf"
 
             target="_blank"
 
@@ -82,7 +82,7 @@ function Resume(){
 
           <a
 
-            href="/assets/docs/Nandha Kumar TSM Resume.pdf"
+            href="/NK-Web/assets/docs/Nandha Kumar TSM Resume.pdf"
 
             download
 

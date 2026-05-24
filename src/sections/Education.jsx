@@ -11,7 +11,7 @@ const education = [
     desc:
     "Specialization in Finance, Analytics, and AI-driven business systems.",
 
-    logo:"/assets/images/logos/tsm-logo.jpg",
+    logo:"/NK-Web/assets/images/logos/tsm-logo.jpg",
 
   },
 
@@ -26,7 +26,7 @@ const education = [
     desc:
     "Focused on management fundamentals, accounting, and business analytics.",
 
-    logo:"/assets/images/logos/ngm-logo.jpg",
+    logo:"/NK-Web/assets/images/logos/ngm-logo.jpg",
 
   },
 
@@ -41,7 +41,7 @@ const education = [
     desc:
     "Commerce stream with strong foundation in economics and business studies.",
 
-    logo:"/assets/images/logos/pkd-logo.jpg",
+    logo:"/NK-Web/assets/images/logos/pkd-logo.jpg",
 
   },
 

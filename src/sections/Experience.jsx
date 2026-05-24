@@ -8,7 +8,7 @@ const experiences = [
 
     duration:"Apr 2026 – May 2026",
 
-    logo:"/assets/images/logos/liveforcause.jpg",
+    logo:"/NK-Web/assets/images/logos/liveforcause.jpg",
 
     description:
     "Worked on fundraising campaigns, donor outreach, awareness initiatives, and stakeholder engagement activities.",
@@ -23,7 +23,7 @@ const experiences = [
 
     duration:"Jul 2025 – Sep 2025",
 
-    logo:"/assets/images/logos/tradeshala-logo.jpg",
+    logo:"/NK-Web/assets/images/logos/tradeshala-logo.jpg",
 
     description:
     "Worked on live trading, portfolio analysis, market research, and client-facing presentations.",
@@ -38,7 +38,7 @@ const experiences = [
 
     duration:"May 2025 – Aug 2025",
 
-    logo:"/assets/images/logos/rkglobal-logo.jpg",
+    logo:"/NK-Web/assets/images/logos/rkglobal-logo.jpg",
 
     description:
     "Analyzed stock performance, valuation models, and risk assessment strategies.",
@@ -53,7 +53,7 @@ const experiences = [
 
     duration:"2022 – 2024",
 
-    logo:"/assets/images/logos/ns-education.jpg",
+    logo:"/NK-Web/assets/images/logos/ns-education.jpg",
 
     description:
     "Provided academic tutoring and mentoring support for undergraduate students in commerce, management, and business analytics subjects.",
